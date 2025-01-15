@@ -28,21 +28,26 @@ export default async function Page({ params }) {
   // URLパラメータのIDを参照して、ブログの詳細を取得
   const article = await getArticlesDetail(params.slug);
   return (
-    <main className="{styles.main}">
-      <div className="{styles.article}">
-        <p className="{styles.thumbnail}">
+    <main className="relative">
+      <div className=" dark:transparent-img-dark absolute w-full">
           <Image
+            className="z-0 w-full"
             src={article.thumbnail.url}
             alt={article.title}
             height={article.thumbnail.height}
             width={article.thumbnail.width}
             priority
           />
-        </p>
-        <h1 className="{styles.title}">{article.title}</h1>
-        <p className="{styles.category}">{article.category.name}</p>
-        <div className="{styles.body}">{parse(article.body)}</div>
       </div>
+      <article className="container max-w-screen-xl mx-auto px-4 py-10 relative z-10">
+        <div className="bg-gray0 dark:bg-gray4 bg-opacity-90 py-10">
+          <div className="prose prose-xl dark:prose-invert mx-auto ">
+            <h1 className="{styles.title}">{article.title}</h1>
+            <p className=""><span className="font-noto-serif">CATEGORY:</span>{article.category.name}</p>
+            <div className="{styles.body}">{parse(article.body)}</div>
+          </div>
+        </div>
+      </article>
     </main>
   );
 }

@@ -44,6 +44,7 @@ interface Article {
     id: string;
     name: string;
   };
+  video: string;
 }
 
 // 記事詳細を取得
