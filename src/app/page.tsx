@@ -127,23 +127,23 @@ export default async function Home() {
                     </p>
 
                     <div className="flex items-center justify-center space-x-8">
-                        <a href="https://x.com/ROGIX_VR" className="text-3xl text-gray1 dark:text-gray1 w-16 h-16 flex items-center justify-center rounded-full hover:bg-gray-200 transition ease-in-out duration-500" target="_blank" rel="noopener">
+                        <a href="https://x.com/ROGIX_VR" className="text-3xl text-gray1 dark:text-gray1 w-16 h-16 flex items-center justify-center rounded-full hover:bg-gray-200 transition ease-in-out duration-500" title="X" target="_blank" rel="noopener">
                             <RiTwitterXLine />
                         </a>
 
-                        <a href="https://bsky.app/profile/rogixv.bsky.social" className="text-3xl text-gray1 dark:text-gray1 w-16 h-16 flex items-center justify-center rounded-full hover:bg-gray-200 transition ease-in-out duration-500" target="_blank" rel="noopener">
+                        <a href="https://bsky.app/profile/rogixv.bsky.social" className="text-3xl text-gray1 dark:text-gray1 w-16 h-16 flex items-center justify-center rounded-full hover:bg-gray-200 transition ease-in-out duration-500" title="bluesky" target="_blank" rel="noopener">
                             <RiBlueskyFill />
                         </a>
 
-                        <a href="https://vrchat.com/home/user/usr_7761681a-a516-4782-993b-5ea62b35a428" className="text-3xl text-gray1 dark:text-gray1 w-16 h-16 flex items-center justify-center rounded-full hover:bg-gray-200 transition ease-in-out duration-500" target="_blank" rel="noopener">
+                        <a href="https://vrchat.com/home/user/usr_7761681a-a516-4782-993b-5ea62b35a428" className="text-3xl text-gray1 dark:text-gray1 w-16 h-16 flex items-center justify-center rounded-full hover:bg-gray-200 transition ease-in-out duration-500"  title="VRChat account" target="_blank" rel="noopener">
                             <SiVrchat />
                         </a>
 
-                        <a href="https://andcreate.booth.pm/" className="w-16 h-16 flex items-center justify-center rounded-full hover:bg-gray-200 transition ease-in-out duration-500" target="_blank" rel="noopener">
+                        <a href="https://andcreate.booth.pm/" className="w-16 h-16 flex items-center justify-center rounded-full hover:bg-gray-200 transition ease-in-out duration-500" title="#Studio Louie" target="_blank" rel="noopener">
                             <BoothLogo style={{ width: "32px", height: "32px" }} color={"#73716E"} />
                         </a>
 
-                        <Link href="/contact" className="text-3xl text-gray1 dark:text-gray1 w-16 h-16 flex items-center justify-center rounded-full hover:bg-gray-200 transition ease-in-out duration-500">
+                        <Link href="/contact" className="text-3xl text-gray1 dark:text-gray1 w-16 h-16 flex items-center justify-center rounded-full hover:bg-gray-200 transition ease-in-out duration-500" title="Contact-form page">
                             <RiMailSendFill />
                         </Link>
                     </div>

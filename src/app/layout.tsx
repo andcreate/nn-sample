@@ -53,10 +53,10 @@ export default function RootLayout({ children }) {
                       textAlign: "center",
                     }}
                   >
-                    <Link href="/"><RogixLogo style={{ width: "50px", height: "50px" }} color={"#73716E"} /></Link>
+                    <Link href="/" title="ROGIX Activity"><RogixLogo style={{ width: "50px", height: "50px" }} color={"#73716E"} /></Link>
                   </div>
                   <div className="relative group">
-                    <Link href="/contact" title="ROGIX Portfolio"
+                    <Link href="/contact" title="Contact-form page"
                       className="relative inline-block p-px font-semibold leading-6 text-white bg-gray2 shadow-xl cursor-pointer rounded-xl shadow-zinc-400 dark:shadow-zinc-800 transition-transform duration-300 ease-in-out hover:scale-105 active:scale-95"
                     >
                       <span
