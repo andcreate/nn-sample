@@ -116,7 +116,7 @@ export default async function Home() {
         </div>
       </section>
 
-      <section>
+      <section className="py-10 md:py-16">
         <div className="container max-w-screen-xl mx-auto px-4">
                 <div className="text-center">
                     <h1 className="font-medium font-serif text-brown1 dark:text-gray2 text-4xl md:text-5xl mb-5">
