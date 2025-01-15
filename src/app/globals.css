@@ -40,29 +40,26 @@
     font-family: (--font-ballet);
   }
 
-  .transparent-img {  }
-  .transparent-img img {
-    object-fit: cover; /* 画像を容器に合わせる */
-    -webkit-mask-image: linear-gradient(to top, rgba(242, 242, 242, 0) 0%, rgba(242, 242, 242, 0) 30%, rgba(242, 242, 242, 1) 90%);
-            mask-image: linear-gradient(to top, rgba(242, 242, 242, 0) 0%, rgba(242, 242, 242, 0) 30%, rgba(242, 242, 242, 1) 90%);
-    filter: blur(3px); /* ぼかしの強さ調整 */
-  }
-
-  .dark\:transparent-img-dark img {
-      object-fit: cover; /* 画像を容器に合わせる */
-    -webkit-mask-image: linear-gradient(to top, rgba(12, 12, 12, 0) 0%, rgba(12, 12, 12, 0) 30%, rgba(12, 12, 12, 1) 90%);
-            mask-image: linear-gradient(to top, rgba(12, 12, 12, 0) 0%, rgba(12, 12, 12, 0) 30%, rgba(12, 12, 12, 1) 90%);
-    filter: blur(3px); /* ぼかしの強さ調整 */
-  }
-
-
   .prose .embedly-embed {
     @apply aspect-video w-full;
   }
 
 }
 
+.transparent-img {  }
+.transparent-img img {
+  object-fit: cover; /* 画像を容器に合わせる */
+  -webkit-mask-image: linear-gradient(to top, rgba(242, 242, 242, 0) 0%, rgba(242, 242, 242, 0) 30%, rgba(242, 242, 242, 1) 90%);
+          mask-image: linear-gradient(to top, rgba(242, 242, 242, 0) 0%, rgba(242, 242, 242, 0) 30%, rgba(242, 242, 242, 1) 90%);
+  filter: blur(3px); /* ぼかしの強さ調整 */
+}
 
+.dark\:transparent-img-dark img {
+    object-fit: cover; /* 画像を容器に合わせる */
+  -webkit-mask-image: linear-gradient(to top, rgba(12, 12, 12, 0) 0%, rgba(12, 12, 12, 0) 30%, rgba(12, 12, 12, 1) 90%);
+          mask-image: linear-gradient(to top, rgba(12, 12, 12, 0) 0%, rgba(12, 12, 12, 0) 30%, rgba(12, 12, 12, 1) 90%);
+  filter: blur(3px); /* ぼかしの強さ調整 */
+}
 
 
 /* Color Theme Swatches in Hex */
@@ -85,4 +82,3 @@
 .Typografiya-Website-3-hsla { color: hsla(11, 66, 15, 1); }
 .Typografiya-Website-4-hsla { color: hsla(0, 0, 95, 1); }
 .Typografiya-Website-5-hsla { color: hsla(0, 0, 5, 1); } */
- 
