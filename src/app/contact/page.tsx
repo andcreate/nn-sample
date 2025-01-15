@@ -1,7 +1,3 @@
-import Image from "next/image";
-import parse from "html-react-parser";
-
-
 export default async function Page() {
     return (
         <main className="">
@@ -18,7 +14,6 @@ export default async function Page() {
                             name="entry.1744006876"
                             placeholder="Yamada Tarou"
                             type="text"
-                            required="required"
                         />
                     </div>
                     <div className="mb-10">
@@ -30,7 +25,6 @@ export default async function Page() {
                             name="entry.698953077"
                             placeholder="sample@gmail.com"
                             type="email"
-                            required="required"
                         />
                     </div>
                     <div className="mb-10">
@@ -44,8 +38,8 @@ export default async function Page() {
                     </div>
                     <div className="c-form__submit">
                         <button className="group relative h-12 w-48 overflow-hidden rounded-lg bg-gray0 text-lg shadow" type="submit">
-                            <div class="absolute inset-0 w-3 bg-brown1 transition-all duration-[250ms] ease-out group-hover:w-full"></div>
-                            <span class="relative text-black group-hover:text-white">送信する</span>
+                            <div className="absolute inset-0 w-3 bg-brown1 transition-all duration-[250ms] ease-out group-hover:w-full"></div>
+                            <span className="relative text-black group-hover:text-white">送信する</span>
                         </button>
                     </div>
                 </form>
