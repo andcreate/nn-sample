@@ -3,74 +3,86 @@
 @tailwind utilities;
 
 
-:root {
-  --background: #BFBDBA;
-  --foreground: #0D0D0D;
-}
 
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0D0D0D;
-    --foreground: #BFBDBA;
+    --background: #BFBDBA;
+    --foreground: #0D0D0D;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background: #0D0D0D;
+      --foreground: #BFBDBA;
+    }
+  }
+  body {
+    color: var(--foreground);
+    background: var(--background);
+    letter-spacing: 0.1rem;
+    font-feature-settings: "pkna" 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  letter-spacing: 0.1rem;
-  font-feature-settings: "pkna" 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@layer components {
+  .btn-blue {
+    @apply bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded;
+  }
 }
 
-.font-serif {
-  font-family: var(--font-japanese-serif);
-}
 
-.font-ballet {
-  font-family: (--font-ballet);
-}
+@layer utilities {
+  .font-serif {
+    font-family: var(--font-japanese-serif);
+  }
+  .font-ballet {
+    font-family: (--font-ballet);
+  }
 
-.transparent-img {
-
-}
-.transparent-img img {
-  object-fit: cover; /* 画像を容器に合わせる */
-  -webkit-mask-image: linear-gradient(to top, rgba(242, 242, 242, 0) 0%, rgba(242, 242, 242, 0) 30%, rgba(242, 242, 242, 1) 90%);
-          mask-image: linear-gradient(to top, rgba(242, 242, 242, 0) 0%, rgba(242, 242, 242, 0) 30%, rgba(242, 242, 242, 1) 90%);
-  filter: blur(3px); /* ぼかしの強さ調整 */
-}
-
-.dark\:transparent-img-dark img {
+  .transparent-img {  }
+  .transparent-img img {
     object-fit: cover; /* 画像を容器に合わせる */
-  -webkit-mask-image: linear-gradient(to top, rgba(12, 12, 12, 0) 0%, rgba(12, 12, 12, 0) 30%, rgba(12, 12, 12, 1) 90%);
-          mask-image: linear-gradient(to top, rgba(12, 12, 12, 0) 0%, rgba(12, 12, 12, 0) 30%, rgba(12, 12, 12, 1) 90%);
-  filter: blur(3px); /* ぼかしの強さ調整 */
+    -webkit-mask-image: linear-gradient(to top, rgba(242, 242, 242, 0) 0%, rgba(242, 242, 242, 0) 30%, rgba(242, 242, 242, 1) 90%);
+            mask-image: linear-gradient(to top, rgba(242, 242, 242, 0) 0%, rgba(242, 242, 242, 0) 30%, rgba(242, 242, 242, 1) 90%);
+    filter: blur(3px); /* ぼかしの強さ調整 */
+  }
+
+  .dark\:transparent-img-dark img {
+      object-fit: cover; /* 画像を容器に合わせる */
+    -webkit-mask-image: linear-gradient(to top, rgba(12, 12, 12, 0) 0%, rgba(12, 12, 12, 0) 30%, rgba(12, 12, 12, 1) 90%);
+            mask-image: linear-gradient(to top, rgba(12, 12, 12, 0) 0%, rgba(12, 12, 12, 0) 30%, rgba(12, 12, 12, 1) 90%);
+    filter: blur(3px); /* ぼかしの強さ調整 */
+  }
+
+
+  .prose .embedly-embed {
+    @apply aspect-video w-full;
+  }
+
 }
 
 
 
 
 /* Color Theme Swatches in Hex */
-.Typografiya-Website-1-hex { color: #73716E; }
+/* .Typografiya-Website-1-hex { color: #73716E; }
 .Typografiya-Website-2-hex { color: #BFBDBA; }
 .Typografiya-Website-3-hex { color: #40160D; }
 .Typografiya-Website-4-hex { color: #F2F2F2; }
 .Typografiya-Website-5-hex { color: #0D0D0D; }
 
 /* Color Theme Swatches in RGBA */
-.Typografiya-Website-1-rgba { color: rgba(114, 113, 110, 1); }
+/* .Typografiya-Website-1-rgba { color: rgba(114, 113, 110, 1); }
 .Typografiya-Website-2-rgba { color: rgba(191, 189, 185, 1); }
 .Typografiya-Website-3-rgba { color: rgba(63, 22, 12, 1); }
 .Typografiya-Website-4-rgba { color: rgba(242, 242, 242, 1); }
-.Typografiya-Website-5-rgba { color: rgba(12, 12, 12, 1); }
+.Typografiya-Website-5-rgba { color: rgba(12, 12, 12, 1); } */
 
 /* Color Theme Swatches in HSLA */
-.Typografiya-Website-1-hsla { color: hsla(39, 2, 44, 1); }
+/* .Typografiya-Website-1-hsla { color: hsla(39, 2, 44, 1); }
 .Typografiya-Website-2-hsla { color: hsla(39, 4, 73, 1); }
 .Typografiya-Website-3-hsla { color: hsla(11, 66, 15, 1); }
 .Typografiya-Website-4-hsla { color: hsla(0, 0, 95, 1); }
-.Typografiya-Website-5-hsla { color: hsla(0, 0, 5, 1); }
-
-
+.Typografiya-Website-5-hsla { color: hsla(0, 0, 5, 1); } */
+ 
