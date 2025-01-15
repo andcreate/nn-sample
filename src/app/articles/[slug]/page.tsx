@@ -1,6 +1,7 @@
 import Image from "next/image";
 import parse from "html-react-parser";
 // import styles from "./page.module.scss";
+import { Metadata } from "next";
 import { getArticlesList, getArticlesDetail } from "@/libs/microcms";
 
 export async function generateStaticParams() {
@@ -24,6 +25,16 @@ export async function generateStaticParams() {
   return [...paths];
 }
 
+export const generateMetadata = async ({ params }): Promise<Metadata> => {
+　// ブログの詳細データを取得する関数
+  const blogData =  await getArticlesDetail(params.slug);
+
+  return {
+    title: `${blogData.title} | ROGIX Activity`,
+    description: blogData.title
+  };
+}
+
 export default async function Page({ params }) {
   // URLパラメータのIDを参照して、ブログの詳細を取得
   const article = await getArticlesDetail(params.slug);
@@ -40,10 +51,10 @@ export default async function Page({ params }) {
           />
       </div>
       <article className="container max-w-screen-xl mx-auto px-4 py-10 relative z-10">
-        <div className="bg-gray0 dark:bg-gray4 bg-opacity-90 py-10">
+        <div className="bg-gray0 dark:bg-gray4 !bg-opacity-80 py-20 px-5 lg:px-0">
           <div className="prose prose-xl dark:prose-invert mx-auto ">
             <h1 className="{styles.title}">{article.title}</h1>
-            <p className=""><span className="font-noto-serif">CATEGORY:</span>{article.category.name}</p>
+            <p  className="font-noto-serif"><span className="text-sm inline-block mr-2">CATEGORY:</span>{article.category.name}</p>
             <div className="{styles.body}">{parse(article.body)}</div>
           </div>
         </div>

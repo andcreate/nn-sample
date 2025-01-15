@@ -4,7 +4,7 @@ import "./globals.css";
 
 import RogixLogo from "../components/img/logoSvg";
 
-
+import Transition from "./Transition";
 import Link from 'next/link';
 
 
@@ -30,17 +30,19 @@ const ballet = Ballet({
 });
 
 export const metadata: Metadata = {
-  title: "",
-  description: "",
+  title: 'ROGIX Activity',
+  description: "My Portfolio. Please Contact to me",
 };
 
 
 export default function RootLayout({ children }) {
   return (
+    
     <html lang="ja">
       <body
         className={`${notoSansJP.variable} ${notoSerifJP.variable } ${ballet.variable } antialiased`}
       >
+
           <header>
             <section className="py-10 md:py-16">
               <div className="container max-w-screen-xl mx-auto px-4">
@@ -54,8 +56,8 @@ export default function RootLayout({ children }) {
                     <Link href="/"><RogixLogo style={{ width: "50px", height: "50px" }} color={"#73716E"} /></Link>
                   </div>
                   <div className="relative group">
-                    <Link href="/contact"
-                      className="relative inline-block p-px font-semibold leading-6 text-white bg-gray2 shadow-xl cursor-pointer rounded-xl shadow-zinc-400 transition-transform duration-300 ease-in-out hover:scale-105 active:scale-95"
+                    <Link href="/contact" title="ROGIX Portfolio"
+                      className="relative inline-block p-px font-semibold leading-6 text-white bg-gray2 shadow-xl cursor-pointer rounded-xl shadow-zinc-400 dark:shadow-zinc-800 transition-transform duration-300 ease-in-out hover:scale-105 active:scale-95"
                     >
                       <span
                         className="absolute inset-0 rounded-xl bg-gradient-to-r from-gray0 via-brown1 to-gray4 p-[2px] opacity-0 transition-opacity duration-500 group-hover:opacity-100"
@@ -85,10 +87,10 @@ export default function RootLayout({ children }) {
               </div>
             </section>
           </header>
-        {children}
+        <Transition>{children}</Transition>
 
         <footer className="py-10 md:py-16">
-            <div className="flex flex-row flex-wrap justify-center items-center font-noto-serif"><p>&copy;&nbsp;2025&nbsp;</p><RogixLogo style={{ width: "32px", height: "32px" }} color={"#73716E"} /></div>
+            <div className="flex flex-row flex-wrap justify-center items-center font-noto-serif"><p>&copy;&nbsp;2025&nbsp;</p><Link href="/"><RogixLogo style={{ width: "32px", height: "32px" }} color={"#73716E"} /></Link></div>
         </footer>
 
       </body>

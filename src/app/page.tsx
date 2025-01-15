@@ -1,13 +1,14 @@
 import { notFound } from "next/navigation";
+import Image from "next/image";
 // import styles from "./page.module.scss";
 
-// import RogixIllust from "../components/img/rogix_illust.png";
+import RogixIllust from "../components/img/rogix_illust.png";
 import { LIMIT } from "@/constants";
 import { Cards } from "@/components/Cards";
 
-import { FaRegSmile } from "react-icons/fa";
+import { GiChessKnight } from "react-icons/gi";
 import { FaUnity } from "react-icons/fa";
-import { SiPlanetscale } from "react-icons/si";
+import { GiBubbles } from "react-icons/gi";
 import BoothLogo from "../components/img/BoothSvg";
 import { RiTwitterXLine } from "react-icons/ri";
 import { SiVrchat } from "react-icons/si";
@@ -16,6 +17,8 @@ import { RiMailSendFill } from "react-icons/ri";
 
 import { getArticlesList } from "@/libs/microcms";
 
+import Link from 'next/link';
+// import { Link } from 'next-view-transitions'
 
 export default async function Home() {
   // ブログ一覧を取得
@@ -30,14 +33,20 @@ export default async function Home() {
       <section className="container max-w-screen-xl mx-auto px-4">
         <div className="text-center">
             <div className="flex justify-center mb-16">
-                <img src="./rogix_illust.png" alt="" className="h-40" />
+                <Image
+                    src={RogixIllust}
+                    alt={"ROGIX ILLUST"}
+                    className="h-40 object-contain"
+                    width={512}
+                    height={512}
+                />
             </div>
 
-            <h6 className=" text-gray1 dark:text-gray1 font-medium text-lg md:text-3xl uppercase mb-8">
+            <h6 className=" tracking-widest text-gray1 dark:text-gray1 font-medium text-lg md:text-3xl uppercase mb-8">
                 ROGIX
             </h6>
 
-            <h1 className=" text-brown1 dark:text-brown1 font-normal font-serif text-4xl md:text-7xl leading-none mb-8">
+            <h1 className=" text-brown1 dark:text-gray2 font-normal font-serif text-4xl md:text-7xl leading-none mb-8">
                 <span className="font-noto-serif">Web Front & Creative Director</span>
             </h1>
 
@@ -52,7 +61,7 @@ export default async function Home() {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                   <div className="bg-gray-50 dark:bg-gray1 px-8 py-10 rounded-md">
                       <div className="w-20 py-6 flex justify-center bg-gray2 dark:text-brown1 text-3xl rounded-md mb-4">
-                        <FaRegSmile />
+                        <GiChessKnight />
                       </div>
                       <h4 className="font-medium text-dark1 dark:text-gray0 text-lg mb-4">
                           About
@@ -76,7 +85,7 @@ export default async function Home() {
 
                   <div className="bg-gray-50 dark:bg-gray1 px-8 py-10 rounded-md">
                       <div className="w-20 py-6 flex justify-center bg-gray2 dark:text-brown1 text-3xl rounded-md mb-4">
-                        <SiPlanetscale />
+                        <GiBubbles />
                       </div>
                       <h4 className="font-medium text-dark1 dark:text-gray0 text-lg mb-4">
                           Network
@@ -93,11 +102,11 @@ export default async function Home() {
         <div className="container max-w-screen-xl mx-auto px-4">
           <div className="flex flex-col lg:flex-row justify-between">
             <div className="mb-10 lg:mb-0">
-              <h1 className="font-medium font-serif text-brown1 dark:text-gray1 text-3xl md:text-5xl mb-5">
+              <h1 className="font-medium text-center md:text-left font-serif text-brown1 dark:text-gray2 text-3xl md:text-5xl mb-5">
                   Portfolio
               </h1>
-              <p className="font-normal text-xs md:text-base">
-                  私が携わったプロジェクトを。
+              <p className="font-normal text-center md:text-left text-xs md:text-base">
+                  私が携わったプロジェクトや日々の備忘録を。
               </p>
             </div>
             <div className="">
@@ -110,7 +119,7 @@ export default async function Home() {
       <section>
         <div className="container max-w-screen-xl mx-auto px-4">
                 <div className="text-center">
-                    <h1 className="font-medium font-serif text-brown1 darktext-gray1 text-4xl md:text-5xl mb-5">
+                    <h1 className="font-medium font-serif text-brown1 dark:text-gray2 text-4xl md:text-5xl mb-5">
                         Activity
                     </h1>
                     <p className="font-normal text-gray1 dark:text-gray1 text-md md:text-lg mb-20">
@@ -122,7 +131,7 @@ export default async function Home() {
                             <RiTwitterXLine />
                         </a>
 
-                        <a href="https://vrchat.com/home/user/usr_7761681a-a516-4782-993b-5ea62b35a428" className="text-3xl text-gray1 dark:text-gray1 w-16 h-16 flex items-center justify-center rounded-full hover:bg-gray-200 transition ease-in-out duration-500" target="_blank" rel="noopener">
+                        <a href="https://bsky.app/profile/rogixv.bsky.social" className="text-3xl text-gray1 dark:text-gray1 w-16 h-16 flex items-center justify-center rounded-full hover:bg-gray-200 transition ease-in-out duration-500" target="_blank" rel="noopener">
                             <RiBlueskyFill />
                         </a>
 
@@ -130,13 +139,13 @@ export default async function Home() {
                             <SiVrchat />
                         </a>
 
-                        <a href="https://bsky.app/profile/rogixv.bsky.social" className="w-16 h-16 flex items-center justify-center rounded-full hover:bg-gray-200 transition ease-in-out duration-500" target="_blank" rel="noopener">
+                        <a href="https://andcreate.booth.pm/" className="w-16 h-16 flex items-center justify-center rounded-full hover:bg-gray-200 transition ease-in-out duration-500" target="_blank" rel="noopener">
                             <BoothLogo style={{ width: "32px", height: "32px" }} color={"#73716E"} />
                         </a>
 
-                        <a href="https://bsky.app/profile/rogixv.bsky.social" className="text-3xl text-gray1 dark:text-gray1 w-16 h-16 flex items-center justify-center rounded-full hover:bg-gray-200 transition ease-in-out duration-500" target="_blank" rel="noopener">
+                        <Link href="/contact" className="text-3xl text-gray1 dark:text-gray1 w-16 h-16 flex items-center justify-center rounded-full hover:bg-gray-200 transition ease-in-out duration-500">
                             <RiMailSendFill />
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>

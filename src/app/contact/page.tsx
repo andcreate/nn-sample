@@ -1,9 +1,15 @@
+import type { Metadata } from 'next'
+export const metadata: Metadata = {
+    title: 'Contact | ROGIX Activity'
+  }
+
 export default async function Page() {
     return (
         <main className="">
             <div className="container max-w-screen-xl mx-auto px-4 py-10">
                 <div className="prose mx-auto">
-                <p className="text-xl">お気軽にお問い合わせください。</p>
+                <p className="text-brown1 dark:text-gray2 text-xl">お気軽にお問い合わせください。</p>
+                <p className="text-brown1 dark:text-gray2 text-md">このフォームはGoogleフォームを使用しているため、送信ボタンを押下後に画面が遷移します。</p>
                 <form className="mx-auto" action="https://docs.google.com/forms/d/e/1FAIpQLSeqhE1ivq8O0wgUkqSStY96nJUXu5CWQy9HNm7hOjI2eJXaEg/formResponse" method="POST">
                     <div className="mb-10">
                         <label className="block mb-2 text-lg font-medium text-gray-900 dark:text-gray1" htmlFor="field-name"
@@ -37,7 +43,7 @@ export default async function Page() {
                         ></textarea>
                     </div>
                     <div className="c-form__submit">
-                        <button className="group relative h-12 w-48 overflow-hidden rounded-lg bg-gray0 text-lg shadow" type="submit">
+                        <button className="group relative h-12 w-48 overflow-hidden rounded-lg bg-gray1 text-lg shadow" type="submit">
                             <div className="absolute inset-0 w-3 bg-brown1 transition-all duration-[250ms] ease-out group-hover:w-full"></div>
                             <span className="relative text-black group-hover:text-white">送信する</span>
                         </button>
