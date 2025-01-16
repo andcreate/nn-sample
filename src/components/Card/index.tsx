@@ -35,7 +35,7 @@ export const Card = async ({ article }) => {
             </div>
             <div className="flex-shrink">
               <Image
-                className="object-cover w-48 h-48"
+                className="object-cover w-48 h-48 shadow"
                 src={article.thumbnail.url}
                 alt={article.title}
                 height={article.thumbnail.height}

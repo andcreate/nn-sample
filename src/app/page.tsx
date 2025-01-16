@@ -59,7 +59,7 @@ export default async function Home() {
       <section className="py-10 md:py-16">
           <div className="container max-w-screen-xl mx-auto px-4">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  <div className="bg-gray-50 dark:bg-gray1 px-8 py-10 rounded-md">
+                  <div className="bg-gray-50 dark:bg-gray1 px-8 py-10 rounded-md shadow">
                       <div className="w-20 py-6 flex justify-center bg-gray2 dark:text-brown1 text-3xl rounded-md mb-4">
                         <GiChessKnight />
                       </div>
@@ -71,7 +71,7 @@ export default async function Home() {
                       </p>
                   </div>
 
-                  <div className="bg-gray-50 dark:bg-gray1 px-8 py-10 rounded-md">
+                  <div className="bg-gray-50 dark:bg-gray1 px-8 py-10 rounded-md shadow">
                       <div className="w-20 py-6 flex justify-center bg-gray2 dark:text-brown1 text-3xl rounded-md mb-4">
                         <FaUnity />
                       </div>
@@ -83,7 +83,7 @@ export default async function Home() {
                       </p>
                   </div>
 
-                  <div className="bg-gray-50 dark:bg-gray1 px-8 py-10 rounded-md">
+                  <div className="bg-gray-50 dark:bg-gray1 px-8 py-10 rounded-md shadow">
                       <div className="w-20 py-6 flex justify-center bg-gray2 dark:text-brown1 text-3xl rounded-md mb-4">
                         <GiBubbles />
                       </div>
