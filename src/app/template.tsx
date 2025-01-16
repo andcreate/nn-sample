@@ -1,5 +1,5 @@
 "use client";
-import { motion } from "motion/react"
+import * as motion from "motion/react-client"
 
 export default function Template({ children }: { children: React.ReactNode }) {
   return (
