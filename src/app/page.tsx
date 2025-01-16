@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+// import Image from "next/image";
 // import styles from "./page.module.scss";
 
 // import RogixIllust from "../components/img/rogix_illust.png";
