@@ -71,7 +71,7 @@ export default async function Home() {
                       <h4 className="font-medium text-dark1 dark:text-gray0 text-lg mb-4">
                           About
                       </h4>
-                      <p className="font-normal text-dark1 dark:text-gray0 text-md">
+                      <p className="text-dark1 dark:text-gray0 text-md">
                           Webエンジニアを生業としながら、VRC内ではワールド制作をしています。たまにBoothにコンテンツも置いています。
                       </p>
                   </div>
@@ -83,7 +83,7 @@ export default async function Home() {
                       <h4 className="font-medium text-dark1 dark:text-gray0 text-lg mb-4">
                           Create
                       </h4>
-                      <p className="font-normal text-dark1 dark:text-gray0 text-md">
+                      <p className="text-dark1 dark:text-gray0 text-md">
                           知見を広げること、勉強することを大切に、毎日何かを作っています。Web関連のことを中心に３Ｄ、主にUnityに関することなどを触っています。
                       </p>
                   </div>
@@ -95,7 +95,7 @@ export default async function Home() {
                       <h4 className="font-medium text-dark1 dark:text-gray0 text-lg mb-4">
                           Network
                       </h4>
-                      <p className="font-normal text-dark1 dark:text-gray0 text-md">
+                      <p className="text-dark1 dark:text-gray0 text-md">
                           インターネットだからこそ出来る繋がりだったりコンテンツを大切に、個を尊重しながら関係を日々作っています。
                       </p>
                   </div>
