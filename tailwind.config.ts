@@ -16,6 +16,7 @@ export default {
         brown1: "#40160D",
         gray0: "#F2F2F2",
         gray4: "#0D0D0D",
+        darkBackground: '#F2F2F2',
       },
       fontFamily: {
         "noto-sans": ['var(--font-noto-sans)'],

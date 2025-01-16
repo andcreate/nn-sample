@@ -122,12 +122,10 @@
   height: 5px;
   transform-origin: 0%;
 }
-.progress-bar {
-  background-color: var(--brown1);
-}
-.dark\:progress-bar-dark {
-  background-color: var(--gray1);
-}
+
+/* .dark\:progress-bar--dark {
+  background-color: var(--gray0);
+} */
 
 /* Color Theme Swatches in Hex */
 /* .Typografiya-Website-1-hex { color: #73716E; }

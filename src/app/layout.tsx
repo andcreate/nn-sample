@@ -42,8 +42,6 @@ export default function RootLayout({ children }) {
       <body
         className={`${notoSansJP.variable} ${notoSerifJP.variable } ${ballet.variable } antialiased`}
       >
-        <Progressbar />
-
           <header>
             <section className="py-10 md:py-16">
               <div className="container max-w-screen-xl mx-auto px-4">
@@ -94,7 +92,7 @@ export default function RootLayout({ children }) {
             <div className="flex flex-row flex-wrap justify-center items-center font-noto-serif"><p>&copy;&nbsp;2025&nbsp;</p><Link href="/"><RogixLogo style={{ width: "32px", height: "32px" }} color={"#73716E"} /></Link></div>
         </footer>
 
-
+        <Progressbar />
       </body>
     </html>
   );
