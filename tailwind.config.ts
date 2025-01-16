@@ -19,7 +19,7 @@ export default {
         darkBackground: '#F2F2F2',
       },
       fontFamily: {
-        "noto-sans": ['var(--font-noto-sans)'],
+        "noto-sans": ['var(--font-noto-sans-jp)'],
         "noto-serif": ['var(--font-japanese-serif)'],
         "ballet": ['var(--font-ballet)'],
       }
