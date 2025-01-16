@@ -1,14 +1,18 @@
 import { notFound } from "next/navigation";
+// import Image from "next/image";
 // import styles from "./page.module.scss";
 
 // import RogixIllust from "../components/img/rogix_illust.png";
 import RogixIllust from "../components/img/char_circle";
 import { LIMIT } from "@/constants";
 import { Cards } from "@/components/Cards";
+import GiChessKnight from "@/components/GiChessKnight"
+import FaUnity from "@/components/FaUnity"
+import GiBubbles from "@/components/GiBubbles"
 
-import { GiChessKnight } from "react-icons/gi";
-import { FaUnity } from "react-icons/fa";
-import { GiBubbles } from "react-icons/gi";
+// import { GiChessKnight } from "react-icons/gi";
+// import { FaUnity } from "react-icons/fa";
+// import { GiBubbles } from "react-icons/gi";
 import BoothLogo from "../components/img/BoothSvg";
 import { RiTwitterXLine } from "react-icons/ri";
 import { SiVrchat } from "react-icons/si";
@@ -48,7 +52,7 @@ export default async function Home() {
             </h6>
 
             <h1 className=" text-brown1 dark:text-gray2 font-normal font-serif text-4xl md:text-7xl leading-none mb-8">
-                <span className="font-noto-serif">Web Front & Creative Director</span>
+                <span className="font-noto-serif font-pwid">Web Frontend & Creative Director</span>
             </h1>
 
             <p className="font-normal text-gray4 dark:text-gray1 text-md md:text-2xl mb-16">
@@ -61,9 +65,9 @@ export default async function Home() {
           <div className="container max-w-screen-xl mx-auto px-4">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                   <div className="bg-gray-50 dark:bg-gray1 px-8 py-10 rounded-md shadow">
-                      <div className="w-20 py-6 flex justify-center bg-gray2 dark:text-brown1 text-3xl rounded-md mb-4">
+                    <div className="w-20 flex justify-center bg-gray2 dark:text-brown1 text-3xl rounded-md mb-4">
                         <GiChessKnight />
-                      </div>
+                    </div>
                       <h4 className="font-medium text-dark1 dark:text-gray0 text-lg mb-4">
                           About
                       </h4>
@@ -73,7 +77,7 @@ export default async function Home() {
                   </div>
 
                   <div className="bg-gray-50 dark:bg-gray1 px-8 py-10 rounded-md shadow">
-                      <div className="w-20 py-6 flex justify-center bg-gray2 dark:text-brown1 text-3xl rounded-md mb-4">
+                      <div className="w-20 flex justify-center bg-gray2 dark:text-brown1 text-3xl rounded-md mb-4">
                         <FaUnity />
                       </div>
                       <h4 className="font-medium text-dark1 dark:text-gray0 text-lg mb-4">
@@ -85,7 +89,7 @@ export default async function Home() {
                   </div>
 
                   <div className="bg-gray-50 dark:bg-gray1 px-8 py-10 rounded-md shadow">
-                      <div className="w-20 py-6 flex justify-center bg-gray2 dark:text-brown1 text-3xl rounded-md mb-4">
+                      <div className="w-20 flex justify-center bg-gray2 dark:text-brown1 text-3xl rounded-md mb-4">
                         <GiBubbles />
                       </div>
                       <h4 className="font-medium text-dark1 dark:text-gray0 text-lg mb-4">

@@ -3,23 +3,28 @@
 @tailwind utilities;
 
 
-
-@layer base {
-  :root {
+:root {
     --background: #BFBDBA;
     --foreground: #0D0D0D;
+    --gray1: #73716E;
+    --gray2: #BFBDBA;
+    --brown1: #40160D;
+    --gray0: #F2F2F2;
+    --gray4: #0D0D0D;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0D0D0D;
+    --foreground: #BFBDBA;
   }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --background: #0D0D0D;
-      --foreground: #BFBDBA;
-    }
-  }
+}
+
+@layer base {
   body {
     color: var(--foreground);
     background: var(--background);
     letter-spacing: 0.1rem;
-    font-feature-settings: "calt" 1;
+    font-feature-settings: "pwid" 1, "calt" 1;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -29,6 +34,9 @@
   /* .btn-blue {
     @apply bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded;
   } */
+
+  
+
    .char_circle .cls-1 {
       fill: #c9c9c9;
     }
@@ -76,7 +84,13 @@
     font-family: var(--font-japanese-serif);
   }
   .font-ballet {
-    font-family: (--font-ballet);
+    font-family: var(--font-ballet);
+  }
+  .font-pwid {
+    font-feature-settings: "pwid" 1;
+  }
+  .font-palt {
+    font-feature-settings: "calt" 1;
   }
 
   .prose .embedly-embed {
@@ -100,6 +114,20 @@
   filter: blur(3px); /* ぼかしの強さ調整 */
 }
 
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  transform-origin: 0%;
+}
+.progress-bar {
+  background-color: var(--brown1);
+}
+.dark\:progress-bar-dark {
+  background-color: var(--gray1);
+}
 
 /* Color Theme Swatches in Hex */
 /* .Typografiya-Website-1-hex { color: #73716E; }
