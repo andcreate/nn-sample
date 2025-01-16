@@ -11,7 +11,7 @@ import Link from 'next/link';
 
 
 const notoSansJP = Noto_Sans_JP({
-  weight: ['400',"500", '700'],
+  weight: ['200',"400", '700'],
   style: ['normal'],
   subsets: ['latin'],
   display: 'swap',

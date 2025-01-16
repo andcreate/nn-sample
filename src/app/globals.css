@@ -23,11 +23,12 @@
   body {
     color: var(--foreground);
     background: var(--background);
-    letter-spacing: 0.15rem;
+    letter-spacing: 0.1em;
     font-feature-settings: "palt" 1;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     @apply font-sans;
+    font-weight: 200;
   }
 }
 
