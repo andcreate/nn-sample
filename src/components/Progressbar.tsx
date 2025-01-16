@@ -11,5 +11,9 @@ export default function Progressbar() {
     restDelta: 0.001
   });
 
-  return <motion.div className="progress-bar dark:progress-bar-dark z-50 block" style={{ scaleX }} />
+  return (
+    <div className="dark">
+      <motion.div className="progress-bar bg-brown1 dark:bg-gray0 z-50 block" style={{ scaleX }} />
+    </div>
+  )
 }
