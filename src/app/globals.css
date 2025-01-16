@@ -19,16 +19,55 @@
     color: var(--foreground);
     background: var(--background);
     letter-spacing: 0.1rem;
-    font-feature-settings: "pkna" 1;
+    font-feature-settings: "calt" 1;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 }
 
 @layer components {
-  .btn-blue {
+  /* .btn-blue {
     @apply bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded;
-  }
+  } */
+   .char_circle .cls-1 {
+      fill: #c9c9c9;
+    }
+
+    .char_circle .cls-2 {
+      fill: #fafafa;
+    }
+
+    .char_circle .cls-3 {
+      fill: #1c1c1c;
+    }
+
+    .char_circle .cls-4 {
+      fill: #bcbcbc;
+    }
+
+    .char_circle .cls-5 {
+      fill: none;
+    }
+
+    .char_circle .cls-6 {
+      clip-path: url(#clippath-1);
+    }
+
+    .char_circle .cls-7 {
+      fill: #4c4c4c;
+    }
+
+    .char_circle .cls-8 {
+      fill: #bebebe;
+    }
+
+    .char_circle .cls-9 {
+      fill: #d6d6d6;
+    }
+
+    .char_circle .cls-10 {
+      clip-path: url(#clippath);
+    }
 }
 
 

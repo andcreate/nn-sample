@@ -1,8 +1,9 @@
 import { notFound } from "next/navigation";
-import Image from "next/image";
+// import Image from "next/image";
 // import styles from "./page.module.scss";
 
-import RogixIllust from "../components/img/rogix_illust.png";
+// import RogixIllust from "../components/img/rogix_illust.png";
+import RogixIllust from "../components/img/char_circle";
 import { LIMIT } from "@/constants";
 import { Cards } from "@/components/Cards";
 
@@ -33,13 +34,14 @@ export default async function Home() {
       <section className="container max-w-screen-xl mx-auto px-4">
         <div className="text-center">
             <div className="flex justify-center mb-16">
-                <Image
+                {/* <Image
                     src={RogixIllust}
                     alt={"ROGIX ILLUST"}
                     className="h-40 object-contain"
                     width={512}
                     height={512}
-                />
+                /> */}
+                <RogixIllust style={{ width: "200px", height: "200px" }} />
             </div>
 
             <h6 className=" tracking-widest text-gray1 dark:text-gray1 font-medium text-lg md:text-3xl uppercase mb-8">
