@@ -8,6 +8,7 @@ import RogixLogo from "@/components/img/logoSvg";
 import Transition from "./Transition";
 import Link from 'next/link';
 
+import { Analytics } from "@vercel/analytics/react"
 
 
 const notoSansJP = Noto_Sans_JP({
@@ -86,7 +87,7 @@ export default function RootLayout({ children }) {
               </div>
             </section>
           </header>
-        <Transition>{children}</Transition>
+        <Transition>{children}<Analytics /></Transition>
 
         <footer className="py-10 md:py-16">
             <div className="flex flex-row flex-wrap justify-center items-center font-noto-serif"><p>&copy;&nbsp;2025&nbsp;</p><Link href="/"><RogixLogo style={{ width: "32px", height: "32px" }} color={"#73716E"} /></Link></div>
