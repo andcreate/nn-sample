@@ -4,6 +4,7 @@ import "./globals.css";
 
 import Progressbar from "@/components/Progressbar";
 import RogixLogo from "@/components/img/logoSvg";
+import { IoMdArrowDropright } from "react-icons/io";
 
 import Transition from "./Transition";
 import Link from 'next/link';
@@ -61,29 +62,13 @@ export default function RootLayout({ children }) {
                   </div>
                   <div className="relative group">
                     <Link href="/contact" title="Contact-form page"
-                      className="relative inline-block p-px font-semibold leading-6 text-white bg-gray2 shadow-xl cursor-pointer rounded-xl shadow-zinc-400 dark:shadow-zinc-800 transition-transform duration-300 ease-in-out hover:scale-105 active:scale-95"
+                      className="contact-btn font-normal relative text-center block bg-gray2 dark:bg-gray4 border border-gray4 dark:border-gray2 cursor-pointer overflow-hidden hover:bg-gray1 hover:border-gray0  hover:shadow-gray0 active:bg-gray0 active:text-gray1"
                     >
-                      <span
-                        className="absolute inset-0 rounded-xl bg-gradient-to-r from-gray0 via-brown1 to-gray4 p-[2px] opacity-0 transition-opacity duration-500 group-hover:opacity-100"
-                      ></span>
-
-                      <span className="relative z-10 block px-6 py-3 rounded-xl bg-gray1">
-                        <div className="relative z-10 flex items-center space-x-2">
-                          <span className="transition-all duration-500 group-hover:translate-x-1">Contact me</span>
-                          <svg
-                            className="w-6 h-6 transition-transform duration-500 group-hover:translate-x-1"
-                            data-slot="icon"
-                            aria-hidden="true"
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z"
-                            ></path>
-                          </svg>
-                        </div>
+                      <span className="relative block  px-5 py-3 whitespace-nowrap no-underline z-20 dark:text-gray2 hover:text-gray0">
+                        Contact me
+                        <IoMdArrowDropright className="inline-block align-top" />
                       </span>
+                      <div className="mask dark:bg-gray0 h-7 w-40 absolute z-10"></div>
                     </Link>
                   </div>
 
