@@ -11,6 +11,7 @@
     --brown1: #40160D;
     --gray0: #F2F2F2;
     --gray4: #0D0D0D;
+    --blur: 1rem;
 }
 @media (prefers-color-scheme: dark) {
   :root {
@@ -125,12 +126,26 @@
   transform-origin: 0%;
 }
 
+.article-title {
+  background: 50% 100% / 50% 50% no-repeat
+              radial-gradient(ellipse at bottom, #fff, transparent, transparent);
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: glow 5000ms linear infinite 2000ms;
+}
+
+@keyframes glow {
+    40% {
+      text-shadow: 0 0 8px #fff;
+    }
+  }
+
 /* .dark\:progress-bar--dark {
   background-color: var(--gray0);
 } */
 
 /* Color Theme Swatches in Hex */
-/* .Typografiya-Website-1-hex { color: #73716E; }
+.Typografiya-Website-1-hex { color: #73716E; }
 .Typografiya-Website-2-hex { color: #BFBDBA; }
 .Typografiya-Website-3-hex { color: #40160D; }
 .Typografiya-Website-4-hex { color: #F2F2F2; }

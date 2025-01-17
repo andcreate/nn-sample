@@ -53,7 +53,7 @@ export default async function Page({ params }) {
       <article className="container max-w-screen-xl mx-auto px-4 py-10 relative z-10">
         <div className="bg-gray0 dark:bg-gray4 !bg-opacity-80 py-20 px-5 lg:px-0 outline outline-1 outline-gray0 dark:outline-gray4 border-t border-gray0 dark:border-gray1 shadow-outline">
           <div className="prose prose-xl dark:prose-invert mx-auto ">
-            <h1 className="{styles.title}">{article.title}</h1>
+            <h1 className="article-title">{article.title}</h1>
             <p  className="font-noto-serif"><span className="text-sm inline-block mr-2">CATEGORY:</span>{article.category.name}</p>
             <div className="{styles.body}">{parse(article.body)}</div>
           </div>
