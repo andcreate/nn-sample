@@ -44,8 +44,8 @@ export default async function Page() {
                     </div>
                     <div className="c-form__submit">
                         <button className="group relative h-12 w-48 overflow-hidden rounded-lg bg-gray1 text-lg shadow" type="submit">
-                            <div className="absolute inset-0 w-3 bg-brown1 transition-all duration-[250ms] ease-out group-hover:w-full"></div>
-                            <span className="relative text-black group-hover:text-white">送信する</span>
+                            <div className="absolute inset-0 w-3 bg-gray0 transition-all duration-[250ms] ease-out group-hover:w-full"></div>
+                            <span className="relative text-black group-hover:text-gray1 font-normal">Submit</span>
                         </button>
                     </div>
                 </form>

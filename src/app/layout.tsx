@@ -10,6 +10,7 @@ import Link from 'next/link';
 
 // Vercel
 import { Analytics } from "@vercel/analytics/react"
+// import VercelAnalytics from "@/app/analytics"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 
 
@@ -40,6 +41,7 @@ export const metadata: Metadata = {
 
 
 export default function RootLayout({ children }) {
+  
   return (
     <html lang="ja">
       <body
