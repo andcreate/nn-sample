@@ -51,8 +51,8 @@ export default async function Home() {
                 ROGIX
             </h6>
 
-            <h1 className=" text-brown1 dark:text-gray2 font-normal font-serif text-4xl md:text-7xl leading-none mb-8">
-                <span className="font-noto-serif font-pwid">Web Frontend & Creative Director</span>
+            <h1 className=" font-normal font-serif text-4xl md:text-7xl leading-none mb-8 front-lead">
+                <span className="text-brown1 dark:text-gray2 font-noto-serif font-pwid">Web Frontend & Creative Director</span>
             </h1>
 
             <p className="font-normal text-gray4 dark:text-gray1 text-md md:text-2xl mb-16">
