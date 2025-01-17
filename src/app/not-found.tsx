@@ -6,7 +6,7 @@ export const metadata: Metadata = {
 export default async function Notfound() {
     return (
         <main className="text-center min-h-max">
-            <p className="font-serif text-5xl hero glitch layers overflow-hidden" data-text="404 | Not found"><span>404 | Not found</span></p>
+            <p className="font-serif text-4xl hero glitch layers overflow-hidden" data-text="404 | Not found"><span>404 | Not found</span></p>
         </main>
     );
 };
