@@ -134,6 +134,8 @@
   animation: glow 5000ms linear infinite 2000ms;
 }
 
+
+
 @keyframes glow {
     40% {
       text-shadow: 0 0 8px #fff;
