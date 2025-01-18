@@ -77,6 +77,38 @@
   .char_circle .cls-10 {
     clip-path: url(#clippath);
   }
+  
+  .char_circle:hover .cls-1 {
+    fill: #f7bb9e;
+  }
+
+  .char_circle:hover .cls-2 {
+    fill: #fafafa;
+  }
+
+  .char_circle:hover .cls-3 {
+    fill: #5e0000;
+  }
+
+  .char_circle:hover .cls-4 {
+    fill: #cdba9b;
+  }
+
+  .char_circle:hover .cls-5 {
+    fill: none;
+  }
+  .char_circle:hover .cls-7 {
+    fill: #943800;
+  }
+
+  .char_circle:hover .cls-8 {
+    fill: #fbc400;
+  }
+
+  .char_circle:hover .cls-9 {
+    fill: #facea7;
+  }
+
 }
 
 
