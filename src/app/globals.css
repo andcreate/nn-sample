@@ -117,6 +117,33 @@
   filter: blur(3px); /* ぼかしの強さ調整 */
 }
 
+.transparent-thumb {  }
+.transparent-thumb img {
+  object-fit: cover; /* 画像を容器に合わせる */
+  -webkit-mask-image: linear-gradient(to right, rgba(242, 242, 242, 0) 0%, rgba(242, 242, 242, 0) 30%, rgba(242, 242, 242, 1) 90%);
+          mask-image: linear-gradient(to right, rgba(242, 242, 242, 0) 0%, rgba(242, 242, 242, 0) 30%, rgba(242, 242, 242, 1) 90%);
+  filter: blur(3px); /* ぼかしの強さ調整 */
+}
+
+.dark\:transparent-thumb-dark img {
+    object-fit: cover; /* 画像を容器に合わせる */
+  -webkit-mask-image: linear-gradient(to right, rgba(12, 12, 12, 0) 0%, rgba(12, 12, 12, 0) 30%, rgba(12, 12, 12, 1) 90%);
+          mask-image: linear-gradient(to right, rgba(12, 12, 12, 0) 0%, rgba(12, 12, 12, 0) 30%, rgba(12, 12, 12, 1) 90%);
+  filter: blur(3px); /* ぼかしの強さ調整 */
+
+}
+.dark\:transparent-thumb-dark img {
+
+}
+
+.card:hover .dark\:transparent-thumb-dark img {
+-webkit-mask-image: linear-gradient(to right, rgba(12, 12, 12, 0) 0%, rgba(12, 12, 12, 0) 1%, rgba(12, 12, 12, 1) 90%);
+          mask-image: linear-gradient(to right, rgba(12, 12, 12, 0) 0%, rgba(12, 12, 12, 0) 1%, rgba(12, 12, 12, 1) 90%);
+  filter: blur(1px); /* ぼかしの強さ調整 */
+}
+
+
+
 .progress-bar {
   position: fixed;
   top: 0;
