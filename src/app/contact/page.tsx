@@ -1,10 +1,14 @@
 import type { Metadata } from 'next'
+import Link from 'next/link';
+import { IoMdArrowDropleft } from "react-icons/io";
+
 export const metadata: Metadata = {
     title: 'Contact | ROGIX Activity'
   }
 
 export default async function Page() {
     return (
+        <>
         <main className="">
             <div className="container max-w-screen-xl mx-auto px-4 py-10">
                 <div className="prose mx-auto">
@@ -50,7 +54,21 @@ export default async function Page() {
                     </div>
                 </form>
                 </div>
+                
             </div>
         </main>
+        <div className=" mt-40">
+            <Link href="/" title="Top page"
+                className="back-btn font-normal relative text-center block bg-gray2 dark:bg-gray4 border border-gray4 dark:border-gray2 cursor-pointer overflow-hidden hover:bg-gray1 hover:border-gray0  hover:shadow-gray0 active:bg-gray0 active:text-gray1"
+            >
+                <span className="relative block  px-5 py-3 whitespace-nowrap no-underline z-20 dark:text-gray2 hover:text-gray0">
+                <IoMdArrowDropleft className="inline-block align-top" />
+                Back to top
+                
+                </span>
+                <div className="mask dark:bg-gray0 h-7 w-40 absolute z-10"></div>
+            </Link>
+        </div>
+        </>
     );
 };
