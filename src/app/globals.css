@@ -212,10 +212,57 @@
 
 
 .contact-btn svg {
-  transition: all 1.1s var(--transition-easing);
+  transition: all 1.1s cubic-bezier(0.19, 1, 0.22, 1);
 }
 .contact-btn:hover svg {
   transform: translateX(0.3125rem);
+}
+
+
+
+.back-btn {
+  letter-spacing: 0.2125rem;
+  line-height: 1;
+  transition: 
+		background-color 0.3s cubic-bezier(0.19, 1, 0.22, 1),
+		border 1s cubic-bezier(0.19, 1, 0.22, 1),
+		color 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+    user-select: none;
+}
+.back-btn:hover {
+  box-shadow: 0 0 0.3125rem rgba(255, 255, 255, 0.8);
+}
+
+.back-btn > span {
+	/* color: var(--color-button); */
+	/* font-family: var(--font-button); */
+	/* position: relative; */
+	/* text-decoration: none; */
+	/* white-space: nowrap; */
+	/* z-index: 2; */
+}
+
+
+.back-btn .mask {
+	/* background-color: var(--bg-mask); */
+	/* height: 6.25rem; */
+	/* position: absolute; */
+	transform: translate3d(-120%, -3.125rem, 0) rotate3d(0, 0, 1, 45deg);
+	transition: all 1.1s cubic-bezier(0.19, 1, 0.22, 1);
+	/* width: 12.5rem; */
+	/* z-index: 1; */
+}
+.back-btn:hover .mask {
+	background-color: rgba(255, 255, 255, 1.0);
+	transform: translate3d(900%, -3.25rem, 0) rotate3d(0, 0, 1, 90deg);
+}
+
+
+.back-btn svg {
+  transition: all 1.1s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.back-btn:hover svg {
+  transform: translateX(-0.3125rem);
 }
 
 
