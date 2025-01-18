@@ -79,7 +79,7 @@ export default function RootLayout({ children }) {
         <Transition>{children}<SpeedInsights /><Analytics /></Transition>
 
         <footer className="py-10 md:py-16">
-            <div className="flex flex-row flex-wrap justify-center items-center font-noto-serif"><p>&copy;&nbsp;2025&nbsp;</p><Link href="/"><RogixLogo style={{ width: "32px", height: "32px" }} color={"#73716E"} /></Link></div>
+            <div className="flex flex-row flex-wrap justify-center items-center font-noto-serif"><p>&copy;&nbsp;2025&nbsp;</p><Link href="/" title="ROGIX Activity"><RogixLogo style={{ width: "32px", height: "32px" }} color={"#73716E"} /></Link></div>
         </footer>
 
         <Progressbar />

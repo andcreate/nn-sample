@@ -68,9 +68,9 @@ export default async function Home() {
                     <div className="w-20 flex justify-center bg-gray2 dark:text-brown1 text-3xl rounded-md mb-4">
                         <GiChessKnight />
                     </div>
-                      <h4 className="font-medium text-dark1 dark:text-gray0 text-lg mb-4">
+                      <h2 className="font-medium text-dark1 dark:text-gray0 text-lg mb-4">
                           About
-                      </h4>
+                      </h2>
                       <p className="text-dark1 dark:text-gray0 text-md">
                           Webエンジニアを生業としながら、VRC内ではワールド制作をしています。たまにBoothにコンテンツも置いています。
                       </p>
@@ -80,9 +80,9 @@ export default async function Home() {
                       <div className="w-20 flex justify-center bg-gray2 dark:text-brown1 text-3xl rounded-md mb-4">
                         <FaUnity />
                       </div>
-                      <h4 className="font-medium text-dark1 dark:text-gray0 text-lg mb-4">
+                      <h2 className="font-medium text-dark1 dark:text-gray0 text-lg mb-4">
                           Create
-                      </h4>
+                      </h2>
                       <p className="text-dark1 dark:text-gray0 text-md">
                           知見を広げること、勉強することを大切に、毎日何かを作っています。Web関連のことを中心に３Ｄ、主にUnityに関することなどを触っています。
                       </p>
@@ -92,9 +92,9 @@ export default async function Home() {
                       <div className="w-20 flex justify-center bg-gray2 dark:text-brown1 text-3xl rounded-md mb-4">
                         <GiBubbles />
                       </div>
-                      <h4 className="font-medium text-dark1 dark:text-gray0 text-lg mb-4">
+                      <h2 className="font-medium text-dark1 dark:text-gray0 text-lg mb-4">
                           Network
-                      </h4>
+                      </h2>
                       <p className="text-dark1 dark:text-gray0 text-md">
                           インターネットだからこそ出来る繋がりだったりコンテンツを大切に、個を尊重しながら関係を日々作っています。
                       </p>
