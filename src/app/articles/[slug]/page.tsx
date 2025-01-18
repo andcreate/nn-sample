@@ -65,7 +65,7 @@ export default async function Page({ params }) {
     </main>
     <div className=" mt-40">
           <Link href="/" title="Top page"
-              className="back-btn font-normal relative text-center block bg-gray2 dark:bg-gray4 border border-gray4 dark:border-gray2 cursor-pointer overflow-hidden hover:bg-gray1 hover:border-gray0  hover:shadow-gray0 active:bg-gray0 active:text-gray1"
+              className="back-btn font-normal relative text-center block bg-gray2 dark:bg-gray4 border-t border-b border-gray4 dark:border-gray2 cursor-pointer overflow-hidden hover:bg-gray1 hover:border-gray0  hover:shadow-gray0 active:bg-gray0 active:text-gray1"
           >
               <span className="relative block  px-5 py-3 whitespace-nowrap no-underline z-20 dark:text-gray2 hover:text-gray0">
               <IoMdArrowDropleft className="inline-block align-top" />
