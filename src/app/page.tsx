@@ -52,7 +52,7 @@ export default async function Home() {
             </h6>
 
             <h1 className="flex justify-center items-center">
-                <svg height="150" strokeWidth="1" className="text-line dark:animate-[filling-dark_5s_ease-in-out_forwards] animate-[filling_5s_ease-in-out_forwards] text-4xl md:text-7xl font-noto-serif w-full">
+                <svg height="150" strokeWidth="1" className="text-line dark:animate-filling-dark animate-filling text-4xl md:text-7xl font-noto-serif w-full">
                     <text className="hidden lg:block" x="50%" dominantBaseline="middle" textAnchor="middle" y="50%"><tspan className="">Web Frontend &</tspan> <tspan>Creative Director</tspan></text>
                     <text className="block lg:hidden" x="50%" dominantBaseline="middle" textAnchor="middle" y="30%">
                         <tspan x="50%" className="">Web Frontend &</tspan> <tspan x="50%" dy="1em">Creative Director</tspan>

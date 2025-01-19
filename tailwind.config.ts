@@ -36,8 +36,8 @@ export default {
       //   },
       // },
       animation: {
-        "filling": "filling 5s ease-in forwards",
-        "filling-dark": "filling-dark 5s ease-in forwards",
+        "filling": "filling 5s cubic-bezier(0.83, 0, 0.17, 1) forwards",
+        "filling-dark": "filling-dark 5s cubic-bezier(0.83, 0, 0.17, 1) forwards",
       },
     },
   },
