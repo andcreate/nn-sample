@@ -47,7 +47,7 @@ export default async function Home() {
                 <RogixIllust style={{ width: "200px", height: "200px" }} />
             </div>
 
-            <h6 className=" tracking-widest text-gray1 dark:text-gray1 font-medium text-lg md:text-3xl uppercase mb-8">
+            <h6 className=" tracking-widest text-gray1 dark:text-gray1 font-medium text-2xl md:text-3xl uppercase mb-8">
                 ROGIX
             </h6>
 
