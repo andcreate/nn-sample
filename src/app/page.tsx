@@ -33,7 +33,7 @@ export default async function Home() {
   // console.log( articles );
 
   return (
-    <main className="">
+    <main className="dark">
       <section className="container max-w-screen-xl mx-auto px-4">
         <div className="text-center">
             <div className="flex justify-center mb-16">
@@ -51,13 +51,20 @@ export default async function Home() {
                 ROGIX
             </h6>
 
-            <h1 className=" font-normal font-serif text-4xl md:text-7xl leading-none mb-8 front-lead">
-                <span className="text-brown1 dark:text-gray2 font-noto-serif font-pwid">Web Frontend & Creative Director</span>
+            <h1 className="flex justify-center items-center">
+                <svg height="150" strokeWidth="1" className="text-line dark:animate-[filling-dark_5s_ease-in_forwards] animate-[filling_5s_ease-in_forwards] text-4xl md:text-7xl font-noto-serif w-full">
+                    <text className="hidden lg:block" x="50%" dominantBaseline="middle" textAnchor="middle" y="50%"><tspan className="">Web Frontend &</tspan> <tspan>Creative Director</tspan></text>
+                    <text className="block lg:hidden" x="50%" dominantBaseline="middle" textAnchor="middle" y="30%">
+                        <tspan x="50%" className="">Web Frontend &</tspan> <tspan x="50%" dy="1em">Creative Director</tspan>
+                    </text>
+                </svg>
             </h1>
 
             <p className="font-normal text-gray4 dark:text-gray1 text-md md:text-2xl mb-16">
               <span className="font-ballet">I like to create something that is a win & win for everyone.</span>
             </p>
+
+            
         </div>
       </section>
 

@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import typography from '@tailwindcss/typography';
 
 export default {
   content: [
@@ -6,6 +7,7 @@ export default {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  darkMode: "media",
   theme: {
     extend: {
       colors: {
@@ -22,8 +24,24 @@ export default {
         "noto-sans": ['var(--font-noto-sans-jp)'],
         "noto-serif": ['var(--font-japanese-serif)'],
         "ballet": ['var(--font-ballet)'],
-      }
+      },
+      // keyframes: {
+      //   "filling": {
+      //     "0%, 90%": { fill: "var(--gray4)", "fill-opacity": "0" },
+      //     "100%": { fill: "var(--gray4)", "fill-opacity": "1" },
+      //   },
+      //   "filling-dark": {
+      //     "0%, 90%": { fill: "var(--gray2)", "fill-opacity": "0" },
+      //     "100%": { fill: "var(--gray2)", "fill-opacity": "0" },
+      //   },
+      // },
+      animation: {
+        "filling": "filling 5s ease-in forwards",
+        "filling-dark": "filling-dark 5s ease-in forwards",
+      },
     },
   },
-  plugins: [require('@tailwindcss/typography')],
+  plugins: [
+    typography,
+  ],
 } satisfies Config;
