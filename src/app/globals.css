@@ -668,7 +668,7 @@
 
 
 .text-line  {
-  stroke-dasharray: 1000;
+  stroke-dasharray: 500;
   stroke-dashoffset: 0;
   @apply stroke-brown1 dark:stroke-gray2;
   /* animation: dash 5s linear forwards; */
