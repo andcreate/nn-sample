@@ -13,7 +13,7 @@ export default function Transition({
     <>
     <motion.div 
     ref={divRef}
-    className="fixed w-full h-full bg-gray4 z-50 top-0 left-0"
+    className="fixed w-full h-full bg-gray1 dark:bg-gray4 z-50 top-0 left-0"
     initial={{ y: 0, opacity: 1 }}
         animate={{ y: 0, opacity: 0 }}
         transition={{ ease: "easeInOut", duration: 2 }}
