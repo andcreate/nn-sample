@@ -22,7 +22,7 @@ import { RiMailSendFill } from "react-icons/ri";
 
 import { getArticlesList } from "@/libs/microcms";
 
-import metaimg from "@/app/icon-512x512.png";
+import metaimg from "@/app/TwitterCard.png";
 
 import Link from 'next/link';
 // import { Link } from 'next-view-transitions'
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     },
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: "ROGIX Activity",
     description: "My Portfolio. Please Contact to me",
     images: {
