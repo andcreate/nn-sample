@@ -64,7 +64,7 @@ export default async function Page({ params }) {
   // console.log(formatCreateddate);
 
   const jsonLd = {
-    "@context": "<https://schema.org>",
+    "@context": "https://schema.org",
     "@type": "Article",
     name: article.title,
     headline: article.title,
