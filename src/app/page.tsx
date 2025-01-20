@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     siteName: "ROGIX Activity",
     url: "https://virtual.andcre.com/",
     images: {
-      url: "@/app/icon-512x512.png",
+      url: "./icon-512x512.png",
       type: "image/png",
       width: 512,
       height: 512,
@@ -46,13 +46,14 @@ export const metadata: Metadata = {
     title: "ROGIX Activity",
     description: "My Portfolio. Please Contact to me",
     images: {
-      url: "@/app/icon-512x512.png",
+      url: "./icon-512x512.png",
       type: "image/png",
       width: 512,
       height: 512,
     },
   },
 };
+
 
 
 export default async function Home() {

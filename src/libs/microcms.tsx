@@ -45,6 +45,8 @@ interface Article {
     name: string;
   };
   video: string;
+  createdAt: string;
+  updatedAt: string;
 }
 
 // 記事詳細を取得

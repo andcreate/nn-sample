@@ -51,8 +51,34 @@ export const generateMetadata = async ({ params }): Promise<Metadata> => {
 }
 
 export default async function Page({ params }) {
+  
+
   // URLパラメータのIDを参照して、ブログの詳細を取得
   const article = await getArticlesDetail(params.slug);
+  
+
+  // console.log(article);
+
+  const createddate = new Date( article.createdAt );
+  const formatCreateddate = `${createddate.getFullYear()}/${createddate.getMonth() + 1}/${createddate.getDate()} ${createddate.getHours()}:${createddate.getMinutes()}`;
+  // console.log(formatCreateddate);
+
+  const jsonLd = {
+    "@context": "<https://schema.org>",
+    "@type": "Article",
+    name: article.title,
+    headline: article.title,
+    image: article.thumbnail.url,
+    articleSection: article.body,
+    datePublished: article.createdAt,
+    dateModified: article.updatedAt,
+    author: {
+      "@type": "Person",
+      name: "ROGIX",
+    },
+  };
+  // console.log(article.createdAt);
+
   return (
     <>
     <main className="relative">
@@ -70,11 +96,18 @@ export default async function Page({ params }) {
         <div className="bg-gray0 dark:bg-gray4 !bg-opacity-80 py-20 px-5 lg:px-0 outline outline-1 outline-gray0 dark:outline-gray4 border-t border-gray0 dark:border-gray1 shadow-outline">
           <div className="prose prose-xl dark:prose-invert mx-auto ">
             <h1 className="article-title">{article.title}</h1>
-            <p  className="font-noto-serif"><span className="text-sm inline-block mr-2">CATEGORY:</span>{article.category.name}</p>
+            <div className="flex justify-between">
+              <p className="font-noto-serif"><span className="text-sm inline-block mr-2">CATEGORY:</span>{article.category.name}</p>
+              <p className="font-noto-serif"><span className="text-sm inline-block mr-2">PUBLISHED:</span>{formatCreateddate}</p>
+            </div>
             <div className="{styles.body}">{parse(article.body)}</div>
           </div>
         </div>
       </article>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
     </main>
     <div className=" mt-40">
           <Link href="/" title="Top page"
