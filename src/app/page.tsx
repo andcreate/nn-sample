@@ -22,6 +22,8 @@ import { RiMailSendFill } from "react-icons/ri";
 
 import { getArticlesList } from "@/libs/microcms";
 
+import metaimg from "@/app/icon-512x512.png";
+
 import Link from 'next/link';
 // import { Link } from 'next-view-transitions'
 
@@ -35,7 +37,7 @@ export const metadata: Metadata = {
     siteName: "ROGIX Activity",
     url: "https://virtual.andcre.com/",
     images: {
-      url: "/icon-512x512.png",
+      url: metaimg.src,
       type: "image/png",
       width: 512,
       height: 512,
@@ -46,7 +48,7 @@ export const metadata: Metadata = {
     title: "ROGIX Activity",
     description: "My Portfolio. Please Contact to me",
     images: {
-      url: "/icon-512x512.png",
+      url: metaimg.src,
       type: "image/png",
       width: 512,
       height: 512,
