@@ -27,6 +27,42 @@ import metaimg from "@/app/TwitterCard.png";
 import Link from 'next/link';
 // import { Link } from 'next-view-transitions'
 
+const jsonLd = [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      name: "ROGIX Activity",
+      headline: "ROGIX Activity",
+      image: {
+        "@type": "ImageObject",
+        "url": metaimg.src
+      },
+      mainEntityOfPage: {
+        "@type": "WebPage",
+        "@id": `${process.env.NEXT_PUBLIC_URL}`
+      },
+      author: {
+        "@type": "Person",
+        name: "ROGIX",
+      },
+      datePublished: "2025-01-15T00:00",
+      dateModified: "2025-01-15T00:00"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      name: "Breadcrumbs",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "ROGIX Activity",
+          item: `${process.env.NEXT_PUBLIC_URL}`,
+        }
+      ],
+    },
+  ];
+
 export const metadata: Metadata = {
   title: 'ROGIX Activity',
   description: "My Portfolio. Please Contact to me",
@@ -196,6 +232,10 @@ export default async function Home() {
                 </div>
             </div>
       </section>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
     </main>
   );
 }
