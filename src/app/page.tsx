@@ -39,8 +39,8 @@ export const metadata: Metadata = {
     images: {
       url: metaimg.src,
       type: "image/png",
-      width: 512,
-      height: 512,
+      width: metaimg.width,
+      height: metaimg.height,
     },
   },
   twitter: {
@@ -50,8 +50,8 @@ export const metadata: Metadata = {
     images: {
       url: metaimg.src,
       type: "image/png",
-      width: 512,
-      height: 512,
+      width: metaimg.width,
+      height: metaimg.height,
     },
   },
 };
