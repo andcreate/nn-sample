@@ -28,50 +28,23 @@ import metalogo from "@/app/android-chrome-512x512.png";
 import Link from 'next/link';
 // import { Link } from 'next-view-transitions'
 
-const jsonLd = [
-    {
-      "@context": "http://schema.org",
-      "@type": "WebSite",
-      headline: "ROGIX Activity",
-      description: "My Portfolio. Please Contact to me",
-      mainEntityOfPage: {
-        "@type": "WebPage",
-        "@id": `${process.env.NEXT_PUBLIC_URL}`
-      },
-      image: {
+const jsonLd = {
+    "@context":"http://schema.org",
+    "@type":"WebSite",
+    "name":"ROGIX Activity",
+    "inLanguage":"jp", //ウェブサイトの言語
+    "publisher": {
+    "@type": "Organization",
+    "name": "andCreate",
+    "logo": {
         "@type": "ImageObject",
-        url: metaimg.src
-      },
-      author: {
-        "@type": "Person",
-        name: "ROGIX",
-        image: metalogo.src
-      },
-      publisher: {
-        "@type": "Organization",
-        name: "andCreate",
-        logo: {
-          "@type": "ImageObject",
-          "url": metalogo.src
-        }
-      },
-      datePublished: "2025-01-15T00:00",
-      dateModified: "2025-01-16T00:00"
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      name: "Breadcrumbs",
-      itemListElement: [
-        {
-          "@type": "ListItem",
-          position: 1,
-          name: "ROGIX Activity",
-          item: `${process.env.NEXT_PUBLIC_URL}`,
-        }
-      ],
-    },
-  ];
+        "url": metalogo.src
+    }},
+    "copyrightYear":"2025-01-15T10:00:00+0000",//コピーライトの日付
+    "headline":"ROGIX Activity",
+    "description":"My Portfolio. Please Contact to me",
+    "url":`${process.env.NEXT_PUBLIC_URL}`
+}
 
 export const metadata: Metadata = {
   title: 'ROGIX Activity',
@@ -113,7 +86,8 @@ export default async function Home() {
   // console.log( articles );
 
   return (
-    <main className="dark">
+    <main className="">
+      
       <section className="container max-w-screen-xl mx-auto px-4">
         <div className="text-center">
             <div className="flex justify-center mb-16">
