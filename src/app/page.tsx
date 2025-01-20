@@ -23,30 +23,40 @@ import { RiMailSendFill } from "react-icons/ri";
 import { getArticlesList } from "@/libs/microcms";
 
 import metaimg from "@/app/TwitterCard.png";
+import metalogo from "@/app/android-chrome-512x512.png";
 
 import Link from 'next/link';
 // import { Link } from 'next-view-transitions'
 
 const jsonLd = [
     {
-      "@context": "https://schema.org",
+      "@context": "http://schema.org",
       "@type": "WebSite",
-      name: "ROGIX Activity",
       headline: "ROGIX Activity",
-      image: {
-        "@type": "ImageObject",
-        "url": metaimg.src
-      },
+      description: "My Portfolio. Please Contact to me",
       mainEntityOfPage: {
         "@type": "WebPage",
         "@id": `${process.env.NEXT_PUBLIC_URL}`
       },
+      image: {
+        "@type": "ImageObject",
+        url: metaimg.src
+      },
       author: {
         "@type": "Person",
         name: "ROGIX",
+        image: metalogo.src
+      },
+      publisher: {
+        "@type": "Organization",
+        name: "andCreate",
+        logo: {
+          "@type": "ImageObject",
+          "url": metalogo.src
+        }
       },
       datePublished: "2025-01-15T00:00",
-      dateModified: "2025-01-15T00:00"
+      dateModified: "2025-01-16T00:00"
     },
     {
       "@context": "https://schema.org",
