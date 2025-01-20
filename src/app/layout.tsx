@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import { Noto_Sans_JP, Noto_Serif_JP, Ballet } from "next/font/google";
 import "./globals.css";
 
@@ -35,10 +34,7 @@ const ballet = Ballet({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: 'ROGIX Activity',
-  description: "My Portfolio. Please Contact to me",
-};
+
 
 
 export default function RootLayout({ children }) {
