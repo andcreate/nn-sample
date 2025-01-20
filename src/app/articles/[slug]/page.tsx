@@ -33,7 +33,30 @@ export const generateMetadata = async ({ params }): Promise<Metadata> => {
 
   return {
     title: `${blogData.title} | ROGIX Activity`,
-    description: blogData.title
+    description: blogData.title,
+    openGraph: {
+    type: "website",
+    title: `${blogData.title} | ROGIX Activity`,
+    description: blogData.title,
+    siteName: `${blogData.title} | ROGIX Activity`,
+    images: {
+      url: `${blogData.thumbnail.url}`,
+      type: "image/png",
+      width: `${blogData.thumbnail.width}`,
+      height: `${blogData.thumbnail.height}`,
+    },
+  },
+  twitter: {
+    card: "summary",
+    title: `${blogData.title} | ROGIX Activity`,
+    description: blogData.title,
+    images: {
+      url: `${blogData.thumbnail.url}`,
+      type: "image/png",
+      width: `${blogData.thumbnail.width}`,
+      height: `${blogData.thumbnail.height}`,
+    },
+  },
   };
 }
 

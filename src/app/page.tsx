@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import type { Metadata } from "next";
 // import Image from "next/image";
 // import styles from "./page.module.scss";
 
@@ -23,6 +24,36 @@ import { getArticlesList } from "@/libs/microcms";
 
 import Link from 'next/link';
 // import { Link } from 'next-view-transitions'
+
+export const metadata: Metadata = {
+  title: 'ROGIX Activity',
+  description: "My Portfolio. Please Contact to me",
+  openGraph: {
+    type: "website",
+    title: "ROGIX Activity",
+    description: "My Portfolio. Please Contact to me",
+    siteName: "ROGIX Activity",
+    url: "https://virtual.andcre.com/",
+    images: {
+      url: "@/app/icon-512x512.png",
+      type: "image/png",
+      width: 512,
+      height: 512,
+    },
+  },
+  twitter: {
+    card: "summary",
+    title: "ROGIX Activity",
+    description: "My Portfolio. Please Contact to me",
+    images: {
+      url: "@/app/icon-512x512.png",
+      type: "image/png",
+      width: 512,
+      height: 512,
+    },
+  },
+};
+
 
 export default async function Home() {
   // ブログ一覧を取得
