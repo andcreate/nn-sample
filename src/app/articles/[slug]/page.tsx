@@ -63,20 +63,41 @@ export default async function Page({ params }) {
   const formatCreateddate = `${createddate.getFullYear()}/${createddate.getMonth() + 1}/${createddate.getDate()} ${createddate.getHours()}:${createddate.getMinutes()}`;
   // console.log(formatCreateddate);
 
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    name: article.title,
-    headline: article.title,
-    image: article.thumbnail.url,
-    articleSection: article.body,
-    datePublished: article.createdAt,
-    dateModified: article.updatedAt,
-    author: {
-      "@type": "Person",
-      name: "ROGIX",
+  const jsonLd = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      name: article.title,
+      headline: article.title,
+      image: article.thumbnail.url,
+      articleSection: article.body,
+      datePublished: article.createdAt,
+      dateModified: article.updatedAt,
+      author: {
+        "@type": "Person",
+        name: "ROGIX",
+      },
     },
-  };
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      name: "Breadcrumbs",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "ROGIX Activity",
+          item: `${process.env.NEXT_PUBLIC_URL}`,
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: article.title,
+          item: `${process.env.NEXT_PUBLIC_URL}articles/${article.id}`,
+        },
+      ],
+    },
+  ];
   // console.log(article.createdAt);
 
   return (
