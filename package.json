@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "sitemap": "next-sitemap --config sitemap.config.js",
-    "build": "next build  && next-sitemap --config sitemap.config.js",
+    "build": "next build && next-sitemap --config sitemap.config.js",
     "start": "next start",
     "lint": "next lint"
   },

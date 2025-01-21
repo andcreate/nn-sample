@@ -79,6 +79,7 @@ export default async function Page({ params }) {
       dateModified: article.updatedAt,
       author: {
         "@type": "Person",
+        url: `${process.env.NEXT_PUBLIC_URL}`,
         name: "ROGIX",
       },
     },
