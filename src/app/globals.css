@@ -109,6 +109,12 @@
     fill: #facea7;
   }
 
+  .vrcsvg .vrcsvg-1,.vrcsvg-2{stroke-width:0}
+  /* .vrcsvg .vrcsvg-2{fill:var(--gray2)} */
+
+  /* .unitysvg {
+    fill:#fff
+  } */
 }
 
 

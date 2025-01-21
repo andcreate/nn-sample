@@ -7,18 +7,23 @@ import type { Metadata } from "next";
 import RogixIllust from "../components/img/char_circle";
 import { LIMIT } from "@/constants";
 import { Cards } from "@/components/Cards";
-import GiChessKnight from "@/components/GiChessKnight"
-import FaUnity from "@/components/FaUnity"
-import GiBubbles from "@/components/GiBubbles"
+// import GiChessKnight from "@/components/GiChessKnight"
+// import GiBubbles from "@/components/GiBubbles"
 
 // import { GiChessKnight } from "react-icons/gi";
 // import { FaUnity } from "react-icons/fa";
 // import { GiBubbles } from "react-icons/gi";
+import ConnectWithoutContactIcon from '@/components/ConnectWithoutContactIcon';
+import ChildCareIcon from '@/components/ChildCareIcon';
+import UnityLogo from "../components/FaUnity";
 import BoothLogo from "../components/img/BoothSvg";
-import { RiTwitterXLine } from "react-icons/ri";
-import { SiVrchat } from "react-icons/si";
-import { RiBlueskyFill } from "react-icons/ri";
-import { RiMailSendFill } from "react-icons/ri";
+import XIcon from '@mui/icons-material/X';
+import VrcLogo from "../components/img/VrchatSvg";
+import BlueskyLogo from "../components/img/BlueskySvg";
+import ForwardToInboxIcon from '@mui/icons-material/ForwardToInbox';
+// import { SiVrchat } from "react-icons/si";
+// import { RiBlueskyFill } from "react-icons/ri";
+// import { RiMailSendFill } from "react-icons/ri";
 
 import { getArticlesList } from "@/libs/microcms";
 
@@ -49,12 +54,15 @@ const jsonLd = {
 export const metadata: Metadata = {
   title: 'ROGIX Activity',
   description: "My Portfolio. Please Contact to me",
+  alternates: {
+    canonical: `${process.env.NEXT_PUBLIC_URL}`,
+  },
   openGraph: {
     type: "website",
     title: "ROGIX Activity",
     description: "My Portfolio. Please Contact to me",
     siteName: "ROGIX Activity",
-    url: "https://virtual.andcre.com/",
+    url: `${process.env.NEXT_PUBLIC_URL}`,
     images: {
       url: metaimg.src,
       type: "image/png",
@@ -78,6 +86,7 @@ export const metadata: Metadata = {
 
 
 export default async function Home() {
+
   // ブログ一覧を取得
   const queries = { limit: LIMIT };
   const articlesListResponse = await getArticlesList(queries).catch(() => notFound());
@@ -87,7 +96,6 @@ export default async function Home() {
 
   return (
     <main className="">
-      
       <section className="container max-w-screen-xl mx-auto px-4">
         <div className="text-center">
             <div className="flex justify-center mb-16">
@@ -126,8 +134,8 @@ export default async function Home() {
           <div className="container max-w-screen-xl mx-auto px-4">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                   <div className="bg-gray-50 dark:bg-gray1 px-8 py-10 rounded-md shadow">
-                    <div className="w-20 flex justify-center bg-gray2 dark:text-brown1 text-3xl rounded-md mb-4">
-                        <GiChessKnight />
+                    <div className="w-20 flex justify-center bg-gray2 dark:text-brown1 rounded-md mb-4">
+                        <ChildCareIcon />
                     </div>
                       <h2 className="font-medium text-dark1 dark:text-gray0 text-lg mb-4">
                           About
@@ -138,8 +146,8 @@ export default async function Home() {
                   </div>
 
                   <div className="bg-gray-50 dark:bg-gray1 px-8 py-10 rounded-md shadow">
-                      <div className="w-20 flex justify-center bg-gray2 dark:text-brown1 text-3xl rounded-md mb-4">
-                        <FaUnity />
+                      <div className="w-20 flex justify-center bg-gray2 dark:text-brown1 text-3xl h-auto rounded-md mb-4">
+                        <UnityLogo />
                       </div>
                       <h2 className="font-medium text-dark1 dark:text-gray0 text-lg mb-4">
                           Create
@@ -150,8 +158,8 @@ export default async function Home() {
                   </div>
 
                   <div className="bg-gray-50 dark:bg-gray1 px-8 py-10 rounded-md shadow">
-                      <div className="w-20 flex justify-center bg-gray2 dark:text-brown1 text-3xl rounded-md mb-4">
-                        <GiBubbles />
+                      <div className="w-20 flex justify-center bg-gray2 dark:text-brown1 rounded-md mb-4">
+                        <ConnectWithoutContactIcon />
                       </div>
                       <h2 className="font-medium text-dark1 dark:text-gray0 text-lg mb-4">
                           Network
@@ -192,25 +200,25 @@ export default async function Home() {
                         バーチャル活動を中心とした各プラットフォームです。<br />お問い合わせはＤＭもしくはコンタクトフォームよりどうぞ。
                     </p>
 
-                    <div className="flex items-center justify-center space-x-8">
+                    <div className="flex items-stretch justify-center space-x-2 md:space-x-8">
                         <a href="https://x.com/ROGIX_VR" className="text-3xl text-gray1 dark:text-gray1 w-16 h-16 flex items-center justify-center rounded-full hover:bg-gray-200 transition ease-in-out duration-500" title="X" target="_blank" rel="noopener">
-                            <RiTwitterXLine />
+                            <XIcon />
                         </a>
 
-                        <a href="https://bsky.app/profile/rogixv.bsky.social" className="text-3xl text-gray1 dark:text-gray1 w-16 h-16 flex items-center justify-center rounded-full hover:bg-gray-200 transition ease-in-out duration-500" title="bluesky" target="_blank" rel="noopener">
-                            <RiBlueskyFill />
+                        <a href="https://bsky.app/profile/rogixv.bsky.social" className="text-3xl text-gray1 dark:text-gray1 w-16 h-16 p-5 flex  rounded-full hover:bg-gray-200 transition ease-in-out duration-500" title="bluesky" target="_blank" rel="noopener">
+                            <BlueskyLogo />
                         </a>
 
-                        <a href="https://vrchat.com/home/user/usr_7761681a-a516-4782-993b-5ea62b35a428" className="text-3xl text-gray1 dark:text-gray1 w-16 h-16 flex items-center justify-center rounded-full hover:bg-gray-200 transition ease-in-out duration-500"  title="VRChat account" target="_blank" rel="noopener">
-                            <SiVrchat />
+                        <a href="https://vrchat.com/home/user/usr_7761681a-a516-4782-993b-5ea62b35a428" className="text-3xl text-gray1 dark:text-gray1 w-16 px-2 flex rounded-full hover:bg-gray-200 transition ease-in-out duration-500"  title="VRChat account" target="_blank" rel="noopener">
+                            <VrcLogo style={{  paddingTop: "20px" }} />
                         </a>
 
-                        <a href="https://andcreate.booth.pm/" className="w-16 h-16 flex items-center justify-center rounded-full hover:bg-gray-200 transition ease-in-out duration-500" title="#Studio Louie" target="_blank" rel="noopener">
-                            <BoothLogo style={{ width: "32px", height: "32px" }} color={"#73716E"} />
+                        <a href="https://andcreate.booth.pm/" className="w-16 h-16 p-5 flex rounded-full hover:bg-gray-200 transition ease-in-out duration-500" title="#Studio Louie" target="_blank" rel="noopener">
+                            <BoothLogo  color={"#73716E"} />
                         </a>
 
-                        <Link href="/contact" className="text-3xl text-gray1 dark:text-gray1 w-16 h-16 flex items-center justify-center rounded-full hover:bg-gray-200 transition ease-in-out duration-500" title="Contact-form page">
-                            <RiMailSendFill />
+                        <Link href="/contact" className="text-3xl text-gray1 dark:text-gray1 w-16 h-16 p-5 flex  rounded-full hover:bg-gray-200 transition ease-in-out duration-500" title="Contact-form page">
+                            <ForwardToInboxIcon />
                         </Link>
                     </div>
                 </div>

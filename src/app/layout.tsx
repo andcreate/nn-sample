@@ -3,10 +3,12 @@ import "./globals.css";
 
 import Progressbar from "@/components/Progressbar";
 import RogixLogo from "@/components/img/logoSvg";
-import { IoMdArrowDropright } from "react-icons/io";
+
 
 import Transition from "./Transition";
 import Link from 'next/link';
+
+import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 
 // Vercel
 import { Analytics } from "@vercel/analytics/react"
@@ -41,6 +43,9 @@ export default function RootLayout({ children }) {
   
   return (
     <html lang="ja">
+      <head>
+        {/* <DefaultSeo {...SEO} /> */}
+      </head>
       <body
         className={`${notoSansJP.variable} ${notoSerifJP.variable } ${ballet.variable } antialiased`}
       >
@@ -60,9 +65,9 @@ export default function RootLayout({ children }) {
                     <Link href="/contact" title="Contact-form page"
                       className="contact-btn font-normal relative text-center block bg-gray2 dark:bg-gray4 border border-gray4 dark:border-gray2 cursor-pointer overflow-hidden hover:bg-gray1 hover:border-gray0  hover:shadow-gray0 active:bg-gray0 active:text-gray1"
                     >
-                      <span className="relative block  px-5 py-3 whitespace-nowrap no-underline z-20 dark:text-gray2 hover:text-gray0">
+                      <span className="relative block px-6 py-3 whitespace-nowrap no-underline z-20 dark:text-gray2 hover:text-gray0">
                         Contact me
-                        <IoMdArrowDropright className="inline-block align-top" />
+                        <ArrowRightIcon className="inline-block align-middle" />
                       </span>
                       <div className="mask dark:bg-gray0 h-7 w-40 absolute z-10"></div>
                     </Link>
