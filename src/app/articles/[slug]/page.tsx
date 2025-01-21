@@ -1,9 +1,10 @@
 import Image from "next/image";
 import Link from 'next/link';
 import parse from "html-react-parser";
-import { IoMdArrowDropleft } from "react-icons/io";
+import ArrowLeftIcon from '@mui/icons-material/ArrowLeft';
 // import styles from "./page.module.scss";
 import { Metadata } from "next";
+
 import { getArticlesList, getArticlesDetail } from "@/libs/microcms";
 
 export async function generateStaticParams() {
@@ -34,6 +35,9 @@ export const generateMetadata = async ({ params }): Promise<Metadata> => {
   return {
     title: `${blogData.title} | ROGIX Activity`,
     description: blogData.title,
+    alternates: {
+      canonical: `${process.env.NEXT_PUBLIC_URL}articles/${params.slug}`,
+    },
     openGraph: {
       type: 'article',
       title: blogData.title,
@@ -102,6 +106,24 @@ export default async function Page({ params }) {
 
   return (
     <>
+    {/* <NextSeo
+      title="ページタイトル"
+      description="ページの説明文"
+      canonical="https://www.example.com/page"
+      openGraph={{
+        url: 'https://www.example.com/page',
+        title: 'OGタイトル',
+        description: 'OG説明文',
+        images: [
+          {
+            url: 'https://www.example.com/og-image.jpg',
+            width: 800,
+            height: 600,
+            alt: 'OG画像の代替テキスト',
+          },
+        ],
+      }}
+    /> */}
     <main className="relative">
       <div className=" dark:transparent-img-dark absolute w-full">
           <Image
@@ -132,10 +154,9 @@ export default async function Page({ params }) {
           <Link href="/" title="Top page"
               className="back-btn font-normal relative text-center block bg-gray2 dark:bg-gray4 border-t border-b border-gray4 dark:border-gray2 cursor-pointer overflow-hidden hover:bg-gray1 hover:border-gray0  hover:shadow-gray0 active:bg-gray0 active:text-gray1"
           >
-              <span className="relative block  px-5 py-3 whitespace-nowrap no-underline z-20 dark:text-gray2 hover:text-gray0">
-              <IoMdArrowDropleft className="inline-block align-top" />
+              <span className="relative block px-6 py-3 whitespace-nowrap no-underline z-20 dark:text-gray2 hover:text-gray0">
+              <ArrowLeftIcon className="inline-block align-middle" />
               Back to top
-              
               </span>
               <div className="mask dark:bg-gray0 h-7 w-40 absolute z-10"></div>
           </Link>
