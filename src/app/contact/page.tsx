@@ -3,7 +3,11 @@ import Link from 'next/link';
 import ArrowLeftIcon from '@mui/icons-material/ArrowLeft';
 
 export const metadata: Metadata = {
-    title: 'Contact | ROGIX Activity'
+    title: 'Contact | ROGIX Activity',
+    description: "お問い合わせはこちらまで",
+    alternates: {
+      canonical: `${process.env.NEXT_PUBLIC_URL}contact/`,
+    },
   }
 
 export default async function Page() {
